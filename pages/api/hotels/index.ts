@@ -1,7 +1,7 @@
 import connectDB from "@/db";
 import Hotel from "@/models/hotel.model";
 
-export default async function handler(req, res) {
+export default async function handler(req:Request, res:Response) {
   connectDB();
   //   if (req.method === "POST") {
   //     const newHotel = new Hotel(req.body);
