@@ -81,8 +81,8 @@ const SingleHotel = ({ hotel }) => {
   );
 };
 
-export async function getServerSideProps(ctx) {
-  const res = await fetch(`${process.env.BASE_URL}/api/hotels/${ctx.query.id}`);
+export async function getServerSideProps(ctx:any) {
+  const res = await fetch(`http://localhost:3000/api/hotels/${ctx.query.id}`);
   const data = await res.json();
 
   return {
