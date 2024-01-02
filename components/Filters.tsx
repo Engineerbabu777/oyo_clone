@@ -30,14 +30,14 @@ const Filters = ({
     }
   }
 
-  const handleCheckList = async e => {
-    let newList = []
+  const handleCheckList = async (e:any) => {
+    let newList = [] as any;
     if (e.target.checked) {
       newList.push(e.target.value)
       setCheckedList(newList)
       return
     }
-    newList = newList.filter(i => i !== e.target.value)
+    newList = newList.filter((i:any) => i !== e.target.value)
     setCheckedList(newList)
   }
 
